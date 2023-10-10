@@ -1,12 +1,13 @@
+package Lesson1;
 import java.util.random.*;
 
-class program {
+public class Task2 {
 
-    public static int boolToInt(boolean b) {
+    public int boolToInt(boolean b) {
 	return b ? 1 : 0;
     }
     
-    public static void main(String[] args) {
+    public void task() {
 	RandomGenerator g = RandomGenerator.of("L64X128MixRandom");
 	int a = g.nextInt()%10;
 	int b = g.nextInt()%10;
@@ -24,6 +25,6 @@ class program {
 	    max = d;
 	}
 	max_count = boolToInt(a == max) + boolToInt(b == max) + boolToInt(c == max) + boolToInt(d == max);
-        System.out.format("Numbers: %d, %d, %d, %d%nMax count: %d%n", a, b, c, d, max_count);
+        System.out.format("Numbers: %d, %d, %d, %d%nMax: %d%nMax count: %d%n", a, b, c, d, max, max_count);
     }
 }

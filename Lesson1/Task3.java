@@ -1,7 +1,8 @@
+package Lesson1;
 import java.util.random.*;
 
-class program {
-    public static void main(String[] args) {
+public class Task3 {
+    public void task() {
 	RandomGenerator g = RandomGenerator.of("L64X128MixRandom");
 	int a = g.nextInt()%10;
 	int b = g.nextInt()%10;
@@ -35,6 +36,5 @@ class program {
 	    max = e;
 	}
         System.out.format("Numbers: %d, %d, %d, %d, %d%nMin: %d%nMax: %d%n", a, b, c, d, e, min, max);
-	return 0;
     }
 }

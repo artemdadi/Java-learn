@@ -1,7 +1,8 @@
+package Lesson1;
 import java.util.random.*;
 
-class program {
-    public static void main(String[] args) {
+public class Task1 {
+    public void task() {
 	RandomGenerator g = RandomGenerator.of("L64X128MixRandom");
 	int a = g.nextInt()%10;
 	int b = g.nextInt()%10;
