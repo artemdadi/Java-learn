@@ -19,7 +19,7 @@ class Main {
       			}
       			myReader.close();
    		} catch (FileNotFoundException e) {
-      			e.printStackTrace();
+      			System.out.println("[MAKE] File \"Lesson" + lesson_n + "\\Tasks.txt\" with tasks was not found");
     		}
 		System.out.println("-------Complete task-------");
 		try {
