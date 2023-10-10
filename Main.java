@@ -3,6 +3,7 @@ import java.io.File;
 import java.io.FileNotFoundException;  
 import java.util.Scanner; 
 
+@SuppressWarnings("unchecked")
 class Main {
 	public static void main(String[] args) {
 		String lesson_n = args[0];
