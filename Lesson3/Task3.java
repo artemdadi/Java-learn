@@ -1,6 +1,7 @@
 package Lesson3;
 import java.util.random.*;
- 
+import java.util.Arrays;
+
 public class Task3 {
 	public void task() {
 		RandomGenerator g = RandomGenerator.of("L64X128MixRandom");
@@ -8,8 +9,8 @@ public class Task3 {
 		int[] my_array = new int[array_size];
 		for (int i = 0; i < array_size; i++) {
 			my_array[i] = g.nextInt()%100;
-			System.out.println(my_array[i]);
 		}
+		System.out.println("Array: " + Arrays.toString(my_array));
 		int min = my_array[0]; 
 		int max = my_array[0];
 		for (int i = 1; i < array_size; i++) {
