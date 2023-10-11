@@ -7,7 +7,7 @@ javac PrintFile.java
 javac CopyAndReplace.java
 
 if %ERRORLEVEL% neq 0 (
-	echo %program_prefix% Unable to compile Make files: Main.java Print_file.java
+	echo %program_prefix% Unable to compile Make files: Main.java Print_file.java CopyAndReplace.java
 	call :end
 )
 
