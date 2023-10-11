@@ -11,11 +11,13 @@ class Main {
 		try {
       			File tasks_file = new File("Lesson" + lesson_n + "\\Tasks.txt");
       			Scanner myReader = new Scanner(tasks_file);
+			boolean find = false;
       			while (myReader.hasNextLine()) {
-        			String data = myReader.nextLine();//    
-				if (data.substring(0, 1).equals(task_n)){
-					System.out.println(data);
-				}   	
+        			String data = myReader.nextLine(); 
+				if (data.substring(1, 2).equals(".") && find){ break; }
+				if (data.substring(0, 1).equals(task_n)) { find = true; }
+				if (find) {System.out.println(data);}
+				
       			}
       			myReader.close();
    		} catch (FileNotFoundException e) {
