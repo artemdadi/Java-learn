@@ -20,6 +20,7 @@ if exist Lesson%lesson_n%\Task%task_n%.java (
 	call :run_task
 ) else (
 	if not exist Lesson%lesson_n% md Lesson%lesson_n%
+	echo %program_prefix% Copying template to Lesson%lesson_n%\Task%task_n%.java
 	java -classpath ./Make CopyAndReplace "Make/Task_template.java" "Lesson%lesson_n%\Task%task_n%.java" "Lesson|Lesson%lesson_n%" "Task|Task%task_n%"
 	echo %program_prefix% Complete task and press any key
 	pause
