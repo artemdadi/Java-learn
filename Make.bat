@@ -27,11 +27,17 @@ if exist Lesson%lesson_n%\Task%task_n%.java (
 )
 
 :run_task
-echo %program_prefix% Compiling Lesson%lesson_n%\Task%task_n%.java
-javac Lesson%lesson_n%\Task%task_n%.java
-if %ERRORLEVEL% equ 0 (
-	echo %program_prefix% Running Lesson%lesson_n%\Task%task_n%.class
-	java Main "%lesson_n%" "%task_n%"
+if not exist Lesson%lesson_n%\Make.bat (
+	echo %program_prefix% Compiling Lesson%lesson_n%\Task%task_n%.java
+	javac Lesson%lesson_n%\Task%task_n%.java
+	if %ERRORLEVEL% equ 0 (
+		echo %program_prefix% Running Lesson%lesson_n%\Task%task_n%.class
+		java Main "%lesson_n%" "%task_n%"
+	)
+) else (
+	cd Lesson%lesson_n%
+	start Make.bat
+	cd ..
 )
 
 set /p task_again=%program_prefix% Compile and run task again?[y/n] 
